@@ -20,7 +20,7 @@ pipeline {
             steps {
                 bat """
                 docker run --rm -v %cd%\\:/tests -w /tests ${IMAGE_NAME} ^
-                -n -t AB_AS_50_Users.jmx -l results.jtl
+                -n -t Test Plan.jmx -l results.jtl
                 """
             }
         }
