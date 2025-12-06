@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         IMAGE_NAME = 'pavan9908/jmetertester1:v1.0'
-        TEST_REPO = 'https://github.com/Pavan0401-bot/AB_AS_Sampledata50users.git'
+        TEST_REPO = 'https://github.com/Pavan0401-bot/Loadtest50-.git'
     }
 
     stages {
@@ -45,7 +45,7 @@ pipeline {
                     git config --global user.name "Pavan0401-bot"
 
                     rem Pull latest changes first
-                    git pull https://%GIT_USER%:%GIT_PASS%@github.com/Pavan0401-bot/AB_AS_Sampledata50users.git main
+                    git pull https://%GIT_USER%:%GIT_PASS%@github.com/Pavan0401-bot/Loadtest50-.git main
 
                     rem Create results folder if not exists
                     if not exist results mkdir results
@@ -59,7 +59,7 @@ pipeline {
 
                     git commit -m "Automated: Add latest JMeter results for build #%BUILD_NUM%" || echo Nothing to commit
 
-                    git push https://%GIT_USER%:%GIT_PASS%@github.com/Pavan0401-bot/AB_AS_Sampledata50users.git main
+                    git push https://%GIT_USER%:%GIT_PASS%@github.com/Pavan0401-bot/Loadtest50-.git main
                     """
                 }
             }
